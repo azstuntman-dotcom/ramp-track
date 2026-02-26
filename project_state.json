@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [
+    "Production deployment/publish step repeatedly failing with 'Deployment error' (draft builds succeed but cannot go live; drafts may expire).",
+    "Build/rebuild attempts consume credits even when production publish fails."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-add-a-built-in-deployment-diagnostics-indicator-in-the-ui-that-clearly-shows-the-current-app-build-version-and-basic-runtime-status-e-g-service-worker-status-online-offline-so-the-user-can-confirm-whether-production-has-updated-after-a-publish-attempt",
+      "title": "Add a built-in “deployment diagnostics” indicator in the UI that clearly shows the current app build/version and basic runtime status (e.g., service worker status, online/offline), so the user can confirm whether production has updated after a publish attempt.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-user-invokable-force-refresh-clear-cached-app-control-reachable-from-the-login-screen-that-triggers-the-existing-cache-service-worker-reset-behavior-unregister-sw-clear-cache-storage-clear-local-session-storage-as-appropriate-and-then-reloads-the-app",
+      "title": "Add a user-invokable “force refresh / clear cached app” control reachable from the login screen that triggers the existing cache/service-worker reset behavior (unregister SW, clear Cache Storage, clear local/session storage as appropriate) and then reloads the app.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-service-worker-registration-in-frontend-index-html-conditional-via-a-url-query-parameter-e-g-nosw-1-to-allow-a-publish-verification-path-that-bypasses-service-worker-caching-entirely",
+      "title": "Make service worker registration in frontend/index.html conditional via a URL query parameter (e.g., ?nosw=1) to allow a publish verification path that bypasses service worker caching entirely.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-4",
+      "summary": "Ensure frontend/src/App.tsx mounts authentication context inside App.tsx (since frontend/src/main.tsx cannot be edited) by wrapping the existing AppContent subtree with <AuthProvider>, and ensure all useAuth() calls remain inside the provider-mounted subtree without changing existing hash-based navigation and reconnecting overlay behavior.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Ramp Track",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
